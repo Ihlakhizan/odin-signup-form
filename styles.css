@@ -1,3 +1,4 @@
+/* CSS reset */
 /* Box sizing rules */
 *,
 *::before,
@@ -49,4 +50,168 @@ button,
 textarea,
 select {
     font: inherit;
+}
+
+/* End of CSS reset */
+
+/* Document CSS */
+/* General */
+@font-face {
+    font-family: "Norse Bold";
+    src: url("fonts/Norse-Bold.otf") format("opentype");
+}
+
+:root {
+    --main-bg: #F9FAFB;
+}
+
+a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background-color: var(--main-bg);
+    display: flex;
+    gap: 50px;
+}
+
+/* Sidebar */
+.sidebar {
+    background: no-repeat url(images/green-bg.jpg);
+    background-size: cover;
+    color: white;
+    max-width: 33vw;
+    flex: 1 0 33vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner {
+    background-color: rgba(0,0,0,50%);
+    margin: 33% 0 0 0;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.banner-image {
+    max-width: 20%;
+}
+
+.banner-text {
+    font-family: "Norse Bold";
+    font-size: 6rem;
+}
+
+.attribution-text {
+    font-size: 0.9rem;
+    margin: 0 0 2.5% 0;
+}
+
+/* Main content */
+main {
+    width: 77vw;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h2 {
+    max-width: 75%;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+main > h2:first-child {
+    margin-top: 15%;
+}
+
+/* Form */
+.form-heading {
+    margin-bottom: 20px;
+}
+
+.input-section {
+    background-color: white;
+    box-shadow: 5px 10px 5px whitesmoke;
+    border: solid #e2e2e2;
+    border-width: 1px 0px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    margin: 0 0 20px -50px;
+    padding: 20px 50px 30px 50px;
+}
+
+.form-heading {
+    width: 100%;
+}
+
+.input-section > .form-input {
+    flex: 0 0 40%;
+}
+
+.input-section > div:nth-of-type(even) {
+    margin-right: auto;
+}
+
+.form-input {
+    display: flex;
+    flex-flow: column;
+}
+
+.form-input > label {
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.form-input > label.required:after {
+    content: " *";
+    color: red;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid blue;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+input:invalid:focus {
+    border-color: red;
+}
+
+.form-text {
+    font-size: 12px;
+    color: gray;
+}
+
+.btn-submit {
+    color: white;
+    font-weight: bold;
+    background-color: #596D48;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 50px;
+    margin-bottom: 20px;
+}
+
+.signin a {
+    color: #596D48;
+    font-weight: bold;
+    text-decoration: none;
 }

@@ -5,55 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <main>
-        <div class="sidebar">
-            <div class="banner">
-                <img src="images/odin-lined.png" width=50px>
-                <h1 class="banner-text">Odin</h1>
-            </div>
-            <div class="attribution-text">Photo by X on Unsplash</div>
+    <div class="sidebar">
+        <div class="banner">
+            <img class="banner-image" src="images/odin-lined.png">
+            <h1 class="banner-text">Odin</h1>
         </div>
-        <div class="signup">
-            <p class="promo-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-            <p class="promo-text">You <em>know</em> you want to.</p>
-            <form class="signup-form" action="" method="post">
-                <div class="form-item">
-                    <label for="firstname">First Name
+        <div class="attribution-text">Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a>
+        </div>
+    </div>
+
+    <main>
+            <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</h2>
+            <h2>You <em>know</em> you want to.</h2>
+            <form class="signup-form" action="" method="">
+                <div class="input-section">
+                    <h2 class="form-heading">Let's do this!</h2>
+                    <div class="form-input">
+                        <label for="firstname" class="required">First Name</label>
                         <input id="firstname" type="text" name="firstname" placeholder="Thor" required>
-                    </label>
-                </div>
-                <div class="form-item">
-                    <label for="lastname">Last Name
-                        <input id="lastname" type="text" name="lastname" placeholder="Odinson">
-                    </label>
-                </div>
-                <div class="form-item">
-                    <label for="email">Email
-                        <input id="email" type="email" name="email">
-                    </label>
-                </div>
-                <div class="form-item">
-                    <label for="phoneno">Phone Number
-                        <input id="phoneno" type="tel" name="phoneno">
-                    </label>
-                </div>
-                <div class="form-item">
-                    <label for="password">Password
-                        <input id="password" type="password" name="password">
-                    </label>
-                </div>
-                <div class="form-item">Confirm Password
-                    <label for="password-confirmation">
-                        <input id="password-confirmation" type="password" name="password">
-                    </label>
+                    </div>
+                    <div class="form-input">
+                        <label for="lastname" class="required">Last Name</label>
+                        <input id="lastname" type="text" name="lastname" placeholder="Odinson" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="email" class="required">Email</label>
+                        <input id="email" type="email" name="email" placeholder="thor@valhalla.com" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="phoneno">Phone Number</label>
+                        <input id="phoneno" type="tel" name="phoneno" minlength="8">
+                    </div>
+                    <div class="form-input">
+                        <label for="password" class="required">Password</label>
+                        <input id="password" type="password" name="password" minlength="6" pattern=".*\d.*" required>
+                        <div class="form-text">Must be at least 6 characters long and include at least 1 number.</div>
+                    </div>
+                    <div class="form-input">
+                        <label for="password-confirmation" class="required">Confirm Password</label>
+                        <input id="password-confirmation" type="password" name="password" required>
+                    </div>
                 </div>
             <button type="submit" class="btn-submit">Create Account</button>
             </form>
             <div class="signin">Already have an account? <a href="#">Log in</a></div>
-        </div>
     </main>
 </body>
 </html>
